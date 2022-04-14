@@ -1,0 +1,29 @@
+{
+  "ignoreTestFiles": [
+    "**/1-getting-started/*",
+    "**/2-advanced-examples/*"
+  ],
+  "pageLoadTimeout": 10000,
+  "defaultCommandTimeout": 8000,
+  "env": {
+    "url": "http://rahulshettyacademy.com/angularpractice/"
+  },
+  "retries": {
+    "runMode": 3
+  },
+  "testFiles": "**/*.feature",
+  "chromeWebSecurity": false,
+  "projectId": "nkkaar",
+  "screenshotsFolder": "cypress/reports/mochareports/assets",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
+}

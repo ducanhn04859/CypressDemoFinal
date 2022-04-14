@@ -1,0 +1,47 @@
+{
+  "name": "finalcypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "headTest": "npx cypress run -- --headed",
+    "chromeTest": "npx cypress run --browser chrome",
+    "recordDashBoardTest": "npx cypress run --record --key 44909c0a-7156-44c7-9939-7be8b3282b72 --reporter mochawesome",
+    "GreenKartTest": "npx cypress run --spec \"cypress/integration/GreenKart/*\"",
+    "testSmokeTag": "npx cypress-tags run -e TAGS='@Smoke' --headed --browser chrome",
+    "testAllTag": "npx cypress-tags run -e TAGS='@Ecom or @API'",
+    "clean:reports": "rm -R -f cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports ",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports -- inline",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cypress": "^9.5.3",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-cucumber-preprocessor": "^2.5.5",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^4.1.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "dependencies": {
+    "cypress-mochawesome-reporter": "^3.0.0"
+  }
+}

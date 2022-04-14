@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-14T02:12:57.594Z",
+    "end": "2022-04-14T02:13:14.100Z",
+    "duration": 16506,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34e90183-accf-4345-87c8-b3bf51373d1c",
+      "title": "",
+      "fullFile": "cypress/integration/tests/BDD/api.feature",
+      "file": "cypress/integration/tests/BDD/api.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "deaf8c15-ca6c-44bb-bb86-8c497e519364",
+          "title": "Validate API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API GET Method",
+              "fullTitle": "Validate API API GET Method",
+              "timedOut": null,
+              "duration": 3480,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "034819fb-95c8-4e05-8d83-f43db348e8ee",
+              "parentUUID": "deaf8c15-ca6c-44bb-bb86-8c497e519364",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "API Test override url request",
+              "fullTitle": "Validate API API Test override url request",
+              "timedOut": null,
+              "duration": 1341,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/tests/BDD/api.feature/Validate API -- API Test override url request (failed).png\"\n        }\n      ],\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/tests/BDD/api.feature/Validate API -- API Test override url request (failed) (attempt 2).png\"\n        }\n      ],\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/tests/BDD/api.feature/Validate API -- API Test override url request (failed) (attempt 3).png\"\n        }\n      ],\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/tests/BDD/api.feature/Validate API -- API Test override url request (failed) (attempt 4).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/tests/BDD/api.feature/Validate API -- API Test override url request (failed).png\"\n]",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 200",
+                "estack": "AssertionError: expected 404 to equal 200\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:79:25)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:10472:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:9817:35)",
+                "diff": "- 404\n+ 200\n"
+              },
+              "uuid": "2fa27226-934e-48c5-8612-7ea1edcf7854",
+              "parentUUID": "deaf8c15-ca6c-44bb-bb86-8c497e519364",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "API POST Method",
+              "fullTitle": "Validate API API POST Method",
+              "timedOut": null,
+              "duration": 968,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d9330a00-823f-499f-9bb6-30a2cba99888",
+              "parentUUID": "deaf8c15-ca6c-44bb-bb86-8c497e519364",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "034819fb-95c8-4e05-8d83-f43db348e8ee",
+            "d9330a00-823f-499f-9bb6-30a2cba99888"
+          ],
+          "failures": [
+            "2fa27226-934e-48c5-8612-7ea1edcf7854"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5789,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

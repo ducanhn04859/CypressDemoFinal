@@ -1,0 +1,160 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validate API",
+    "line": 1,
+    "id": "validate-api",
+    "tags": [],
+    "uri": "api.feature",
+    "elements": [
+      {
+        "id": "validate-api;api-get-method",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "API GET Method",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 3
+          },
+          {
+            "name": "@TC-01",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open Angular Page",
+            "result": {
+              "status": "passed",
+              "duration": 2479000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I send GET Method",
+            "result": {
+              "status": "passed",
+              "duration": 933000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Result should one book",
+            "result": {
+              "status": "passed",
+              "duration": 187000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validate-api;api-test-override-url-request",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "API Test override url request",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 10
+          },
+          {
+            "name": "@TC-02",
+            "line": 10
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I open Angular Page",
+            "result": {
+              "status": "passed",
+              "duration": 846000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send API GET Method GetBook",
+            "result": {
+              "status": "passed",
+              "duration": 373000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I expect return code 404",
+            "result": {
+              "status": "failed",
+              "duration": 10000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -404\n    +200\n\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:79:25)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:10472:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress/integration/tests/BDD/api.feature:9817:35)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "validate-api;api-post-method",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "API POST Method",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 17
+          },
+          {
+            "name": "@TC-03",
+            "line": 17
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I open Angular Page",
+            "result": {
+              "status": "passed",
+              "duration": 1329000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I send API POST Method",
+            "result": {
+              "status": "passed",
+              "duration": 245000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I expect return code 200",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
